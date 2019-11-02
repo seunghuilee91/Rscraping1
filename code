@@ -1,0 +1,27 @@
+# I wanted to scrap those titles related to "광군절", which is China Shopping Festival held on every 11th, November shark.
+# So, here is what I have done using Rselenum package
+
+Firstly, you should follow the step to get prepared, you may find more details out of the REAMDME of this file.
+
+library(httr)
+library(rvest)
+library(dplyr)
+library(RSelenium)
+
+remD <- remoteDriver(port=4445L, browserName="chrome")   # MAKE SURE THAT CMD OF YOUR COMPUTER IS STILL RUNNING AT THE SAME TIME
+remD$open() # IT WILL DIRECTLY RUN CHROME 
+
+title_forme <- "광군절" 
+remD$navigate(paste0("https://www.youtube.com/results?search_query=",title_forme))
+
+html <- remD$getPageSource()[[1]]
+html <- read_html(html)
+
+youtube_title <- html %>% html_nodes("#video-title") %>% html_text()
+youtube_title[1:10]
+
+youtube_title <- gsub("\n","",youtube_title) # I JUST WANTED TO MAKE IT LOOK BETTER AND MORE CLEAR
+youtube_title <- trimws(youtube_title)
+
+youtube_title[1:10]
+
