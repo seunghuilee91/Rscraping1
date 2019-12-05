@@ -11,4 +11,7 @@ https://sites.google.com/a/chromium.org/chromedriver/
 https://www.seleniumhq.org/download/
 
 #CMD 
-java -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -port 4445
+cd C:\selenium
+java -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.8.1.jar -port 4445 (up to version that you got)
+
+for me it works as java -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -port 4445
