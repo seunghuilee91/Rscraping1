@@ -42,15 +42,16 @@ top_50 <- noun_yt %>%
  head(50)
 top_50
 wordcloud2(top_50, color = "random-light", backgroundColor = "grey",fontFamily = 'HY견고딕')
-result as http://localhost:23027/session/viewhtml3183acb18b3/index.html
+
+* <b> result as http://localhost:23027/session/viewhtml3183acb18b3/index.html </b>
 
 # JiebaR
-referto https://blog.csdn.net/songzhilian22/article/details/49184047
-result as http://localhost:23027/session/viewhtml318474d7d30/index.html
+
 seg <- qseg[product_title]
 seg <- seg[nchar(seg)>1]
 seg <- table(seg)
 seg <- sort(seg, decreasing = TRUE)
 wordcloud2(seg, color = "random-light", backgroundColor = "grey")
 
-
+* <b> referto https://blog.csdn.net/songzhilian22/article/details/49184047 </b>
+* result as http://localhost:23027/session/viewhtml318474d7d30/index.html
