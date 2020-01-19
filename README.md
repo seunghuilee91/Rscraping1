@@ -53,5 +53,5 @@ seg <- table(seg)
 seg <- sort(seg, decreasing = TRUE)
 wordcloud2(seg, color = "random-light", backgroundColor = "grey")
 
-* <b> referto https://blog.csdn.net/songzhilian22/article/details/49184047 </b>
-* result as http://localhost:23027/session/viewhtml318474d7d30/index.html
+* referto https://blog.csdn.net/songzhilian22/article/details/49184047
+* <b> result as http://localhost:23027/session/viewhtml318474d7d30/index.html </b>
