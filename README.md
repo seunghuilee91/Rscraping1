@@ -14,6 +14,20 @@ cd C:\selenium
 java -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.8.1.jar -port 4445 (up to version that you got)
 for me it works as java -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -port 4445
 
+* CODE 
+remD <- remoteDriver(port=4445L, browserName="chrome")
+remD$open()
+remD$navigate(url)
+
+
+# PHANTOMJS - CHEAT-KEY!
+pJS <- wdman::phantomjs(port=4567L) 
+remDr <- remoteDriver(port=4567L, browserName='phantomjs')
+remDr$open()
+remDr$navigate(url)
+remDr$screenshot(display = T)
+html <- remDr$getPageSource()[[1]]
+
 
 # WordCloud
 # KoNLP
